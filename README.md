@@ -81,6 +81,29 @@ services.AddAuthentication(options =>
           });
 
  ```
+ ### Go https://github.com/Kasunjith-Bimal/TimeStone.IdentityServer.EntityFramworkWithAngular/blob/master/TimeStone.Angular/src/app/app.module.ts
+Replace your Identity Server Url - http://localhost:5000 (Change authority: 'http://localhost:5000')
+Replace redirect_uri ,post_logout_redirect_uri and silent_redirect_uri
+```
+     NgOidcClientModule.forRoot({
+      oidc_config: {
+        authority: 'http://localhost:5000',
+        client_id: 'angular_spa',
+        redirect_uri: 'http://localhost:4200/callback.html',
+        response_type: 'id_token token',
+        scope: 'openid profile email API1',
+        post_logout_redirect_uri: 'http://localhost:4200/signout-callback.html',
+        silent_redirect_uri: 'http://localhost:4200/renew-callback.html',
+        automaticSilentRenew: true
+      }
+    })
+
+```
+# Angular Application 
+Select your Angular application
+```
+npm install
+```
 
 # Restore Application 
 ```
@@ -131,3 +154,11 @@ InitializeDatabase(app);
 ```
 
 ### Run Application 
+Run TimeStone.IdentityServer (localhost:5000)
+```
+dotnet run 
+```
+Run Angular Application (localhost:4200)
+```
+ng serve 
+```
