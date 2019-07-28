@@ -1,5 +1,14 @@
 # TimeStone.IdentityServer.EntityFramwork
 Identity Server with   Database 
+# Use Learn
+https://medium.com/interoperable/securing-your-angular-7-application-with-oidc-and-ngrx-7775e8325b51 ,
+https://medium.com/interoperable/route-guards-to-guard-routes-with-ng-oidc-client-6a61e6029424 ,
+https://www.youtube.com/watch?v=-09ajA4rOKU&t=8s ,
+https://www.youtube.com/watch?v=54ZhT3ko9VI&t=559s ,
+https://www.youtube.com/watch?v=Ak0wKKFNG_c&t=730s ,
+https://www.youtube.com/watch?v=JWlx_zvGXyM ,
+https://www.youtube.com/watch?v=KmrTO3__Huw&t=166s
+
 
 # Identity Server Configuration 
 
