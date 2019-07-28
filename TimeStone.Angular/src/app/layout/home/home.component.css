@@ -1,0 +1,66 @@
+.slick-slider {
+    width: 90%;
+    margin: auto;
+    background: #000;
+  }
+   
+  .nav-btn {
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 100px !important;
+  }
+   
+  .prev-slide.slick-disabled,
+  .next-slide.slick-disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+   
+  /* .prev-slide {
+    background: url(assets/images/nav-icon.png) no-repeat scroll 0 0;
+    left: -33px;
+  }
+   
+  .next-slide {
+    background: url(assets/images/nav-icon.png) no-repeat scroll -24px 0px;
+    right: -33px;
+  } */
+   
+  .prev-slide:hover {
+    background-position: 0px -53px;
+  }
+   
+  .next-slide:hover {
+    background-position: -24px -53px;
+  }
+
+  .borderBox{
+      margin-left: 1%;
+      margin-bottom: 5%;
+      float: left;
+      width: 230px;
+  }
+
+  .box-flate{
+      border: 1px solid #dedede;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5%;
+  }
+
+  .box-title{
+      border: 1px solid #dedede;
+      background-color: #efefef;
+      height: 30px;
+      transform: 1;
+      margin-bottom: 1%;
+      vertical-align: middle;
+      font-weight: 700;
+  }
+
+  .box-body{
+      width: 100%;
+      margin: 0 auto;
+  }

@@ -1,0 +1,152 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+  <div class="list-group">
+      <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+         <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+          <span>Home</span>
+      </a>
+      <a routerLink="/vehicle" [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-car"></i>&nbsp; 
+          <span>Vehicle</span>
+      </a>
+      <a  [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-table"></i>&nbsp;
+          <span>Dashbord</span>
+      </a>
+      <a [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-edit"></i>&nbsp;
+          <span>Dashbord</span>
+      </a>
+      <a  [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-desktop"></i>&nbsp;
+          <span>Dashbord</span>
+      </a>
+      <a  [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-wrench"></i>&nbsp;
+          <span>Dashbord</span>
+      </a>
+      <a [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-th-list"></i>&nbsp;
+          <span>Dashbord</span>
+      </a>
+      <div class="nested-menu">
+          <a class="list-group-item" (click)="addExpandClass('pages')">
+              <i class="fa fa-plus"></i>&nbsp;
+              <span>Dashbord</span>
+          </a>
+          <li class="nested" [class.expand]="showMenu === 'pages'">
+              <ul class="submenu">
+                  <li>
+                      <a href="javascript:void(0)">
+                          <i class="fa fa-monument"></i>&nbsp;
+                          <span>Dashbord</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0)">
+                          <i class="fa fa-monument"></i>&nbsp;
+                          <span>Das</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0)">
+                          <i class="fa fa-monument"></i>&nbsp;
+                          <span>Dasasd</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+      <a  [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-file-o"></i>&nbsp;
+          <span>fddf</span>
+      </a>
+      <a href="http://www.strapui.com/" class="list-group-item">
+          <i class="fa fa-caret-down"></i>&nbsp;
+          <span>fdfdf</span>
+      </a>
+
+      <div class="header-fields">
+          <a (click)="rltAndLtr()" class="list-group-item">
+              <span><i class="fa fa-arrows-h"></i>&nbsp; vcvcv</span>
+          </a>
+          <div class="nested-menu">
+              <a class="list-group-item" (click)="addExpandClass('languages')">
+                  <span><i class="fa fa-language"></i>&nbsp;vcvcvv <b class="caret"></b></span>
+              </a>
+              <li class="nested" [class.expand]="showMenu === 'languages'">
+                  <ul class="submenu">
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('en')">
+                            cvcvcv
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('fr')">
+                             cvcvcvcv
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('ur')">
+                             fdfdfdf
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('es')">
+                             fdfdfdf
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('it')">
+                             fdfdfdf
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('fa')">
+                             dsdsdsf
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)" (click)="changeLang('de')">
+                             dfdfdfdf
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+          </div>
+          <div class="nested-menu">
+              <a class="list-group-item" (click)="addExpandClass('profile')">
+                  <span><i class="fa fa-user"></i>&nbsp; John Smith</span>
+              </a>
+              <li class="nested" [class.expand]="showMenu === 'profile'">
+                  <ul class="submenu">
+                      <li>
+                          <a href="javascript:void(0)">
+                              <span><i class="fa fa-fw fa-user"></i> fdfdfdf</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">
+                              <span><i class="fa fa-fw fa-envelope"></i> fdfdfdf</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="javascript:void(0)">
+                              <span><i class="fa fa-fw fa-gear"></i> ddfdfdf</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a [routerLink]="['/login']" (click)="onLoggedout()">
+                              <span><i class="fa fa-fw fa-power-off"></i> fdfdfdf</span>
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+          </div>
+      </div>
+  </div>
+  <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+      <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;
+      <span>{{ 'Collapse Sidebar' }}</span>
+  </div>
+</nav>
+
