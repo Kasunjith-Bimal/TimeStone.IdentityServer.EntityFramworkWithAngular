@@ -1,5 +1,14 @@
 # TimeStone.IdentityServer.EntityFramwork
 Identity Server with   Database 
+# Use Learn
+https://medium.com/interoperable/securing-your-angular-7-application-with-oidc-and-ngrx-7775e8325b51 ,
+https://medium.com/interoperable/route-guards-to-guard-routes-with-ng-oidc-client-6a61e6029424 ,
+https://www.youtube.com/watch?v=-09ajA4rOKU&t=8s ,
+https://www.youtube.com/watch?v=54ZhT3ko9VI&t=559s ,
+https://www.youtube.com/watch?v=Ak0wKKFNG_c&t=730s ,
+https://www.youtube.com/watch?v=JWlx_zvGXyM ,
+https://www.youtube.com/watch?v=KmrTO3__Huw&t=166s
+
 
 # Identity Server Configuration 
 
@@ -81,6 +90,29 @@ services.AddAuthentication(options =>
           });
 
  ```
+ ### Go https://github.com/Kasunjith-Bimal/TimeStone.IdentityServer.EntityFramworkWithAngular/blob/master/TimeStone.Angular/src/app/app.module.ts
+Replace your Identity Server Url - http://localhost:5000 (Change authority: 'http://localhost:5000')
+Replace redirect_uri ,post_logout_redirect_uri and silent_redirect_uri
+```
+     NgOidcClientModule.forRoot({
+      oidc_config: {
+        authority: 'http://localhost:5000',
+        client_id: 'angular_spa',
+        redirect_uri: 'http://localhost:4200/callback.html',
+        response_type: 'id_token token',
+        scope: 'openid profile email API1',
+        post_logout_redirect_uri: 'http://localhost:4200/signout-callback.html',
+        silent_redirect_uri: 'http://localhost:4200/renew-callback.html',
+        automaticSilentRenew: true
+      }
+    })
+
+```
+# Angular Application 
+Select your Angular application
+```
+npm install
+```
 
 # Restore Application 
 ```
@@ -131,3 +163,11 @@ InitializeDatabase(app);
 ```
 
 ### Run Application 
+Run TimeStone.IdentityServer (localhost:5000)
+```
+dotnet run 
+```
+Run Angular Application (localhost:4200)
+```
+ng serve 
+```
